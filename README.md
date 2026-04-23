@@ -33,26 +33,89 @@ This Street Fighter clone includes two game modes: playing against an AI opponen
 
 ## 🛠️ Requirements
 
-- Python 3.6 or higher
-- Pygame library
+- **Python 3.6 or higher** (Python 3.7+ recommended)
+- **Pygame library** (version 2.0 or higher)
+- **Operating System:** Windows, macOS, or Linux
 
 ## 📦 Installation
 
+### Step 1: Install Python
+If you don't have Python installed:
+1. Go to [python.org](https://www.python.org/downloads/)
+2. Download Python 3.7 or later
+3. Run the installer
+4. **Important:** Check "Add Python to PATH" during installation
+5. Verify installation: Open command prompt/terminal and run `python --version`
+
+### Step 2: Install Pygame
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/street-fighter-game.git
-   cd street-fighter-game
+   git clone https://github.com/tepelekas/street-fighter-python.git
+   cd street-fighter-python
    ```
 
-2. **Install dependencies:**
+2. **Install Pygame using pip:**
    ```bash
    pip install pygame
    ```
 
-3. **Run the game:**
+   **Alternative installation methods:**
+   - If you have multiple Python versions: `python -m pip install pygame` or `python3 -m pip install pygame`
+   - If pip is not recognized, try: `python -m pip install --user pygame`
+
+3. **Verify Pygame installation:**
    ```bash
-   python street_fighter.py
+   python -c "import pygame; print('Pygame version:', pygame.version.ver)"
    ```
+   You should see the Pygame version printed (e.g., "2.1.2").
+
+### Step 3: Run the game
+```bash
+python street_fighter.py
+```
+
+**Alternative run commands:**
+- `python3 street_fighter.py` (if python3 is your command)
+- `py street_fighter.py` (on Windows if py launcher is available)
+
+## 🔧 Troubleshooting
+
+### Common Issues:
+
+**1. "python is not recognized as an internal or external command"**
+- Python is not installed or not added to PATH
+- Reinstall Python and check "Add to PATH" option
+- Or use full path: `C:\Python39\python.exe street_fighter.py`
+
+**2. "ModuleNotFoundError: No module named 'pygame'"**
+- Pygame is not installed
+- Run: `pip install pygame`
+- If multiple Python versions, ensure you're installing for the correct Python
+
+**3. "pygame.error: File is not a Windows BMP file" or image loading errors**
+- The assets folder is missing or corrupted
+- Ensure all files in `assets/` are present and not corrupted
+- The game expects PNG images in the correct subfolders
+
+**4. "ImportError: DLL load failed" (Windows)**
+- Missing Visual C++ Redistributables
+- Download and install from Microsoft: [Visual C++ Redistributables](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+
+**5. Game window doesn't open or closes immediately**
+- Check console for error messages
+- Ensure display supports the resolution (1000x600)
+- Try running from command prompt to see error output
+
+**6. "Permission denied" or "Access denied"**
+- Antivirus might be blocking the executable
+- Add exception for Python and the game folder
+- Run command prompt as administrator
+
+### System Requirements:
+- **RAM:** 512MB minimum, 1GB recommended
+- **Graphics:** Any modern graphics card
+- **Display:** 1024x768 minimum resolution
+- **Sound:** Optional (game runs without sound)
 
 ## 🎯 Controls
 
