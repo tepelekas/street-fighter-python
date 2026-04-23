@@ -138,7 +138,7 @@ python street_fighter.py
 ## 📁 Project Structure
 
 ```
-PYTHON/
+street-fighter-python-main/
 ├── street_fighter.py      # Main game file
 ├── constants.py           # Game constants and colors
 ├── fighter.py             # Fighter class with mechanics
